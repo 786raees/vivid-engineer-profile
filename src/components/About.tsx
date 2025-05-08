@@ -2,6 +2,7 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { Avatar, AvatarImage } from "@/components/ui/avatar";
 
 const About: React.FC = () => {
   const skills = [
@@ -22,25 +23,11 @@ const About: React.FC = () => {
           <div className="md:col-span-5 flex flex-col justify-center">
             <div className="relative">
               <div className="aspect-ratio-square h-[400px] bg-gradient-to-tr from-primary/20 to-primary/5 rounded-2xl overflow-hidden">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  {/* This is a placeholder for profile image */}
-                  <div className="w-full h-full bg-secondary/50 flex items-center justify-center">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="h-20 w-20 text-muted-foreground"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={1}
-                        d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
-                      />
-                    </svg>
-                  </div>
-                </div>
+                <img 
+                  src="/lovable-uploads/d740466b-3f50-445d-a484-135876a7b9ef.png" 
+                  alt="Profile" 
+                  className="w-full h-full object-cover"
+                />
               </div>
               <div className="absolute -bottom-6 -right-6 h-24 w-24 bg-primary rounded-xl"></div>
               <div className="absolute -top-6 -left-6 h-24 w-24 border-2 border-primary rounded-xl"></div>
