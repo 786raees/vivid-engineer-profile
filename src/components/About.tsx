@@ -40,10 +40,8 @@ const About: React.FC = () => {
               with over 7 years of experience
             </h3>
             <p className="text-muted-foreground mb-6">
-              I specialize in building modern web applications, robust backend
-              systems, and interactive 3D experiences. With a passion for clean
-              code and innovative solutions, I've helped companies transform
-              their digital presence and streamline their operations.
+              Expertise in Python, JavaScript, Nodejs and TypeScript, specializing in the development and
+              deployment of scalable web applications. Proficient in AWS cloud services,
             </p>
             <p className="text-muted-foreground mb-6">
               My approach combines technical expertise with a deep understanding
