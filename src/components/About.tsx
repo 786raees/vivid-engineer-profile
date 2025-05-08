@@ -36,12 +36,15 @@ const About: React.FC = () => {
 
           <div className="md:col-span-7">
             <h3 className="text-2xl font-bold mb-4">
-              I'm a <span className="gradient-text">Full Stack Engineer</span>{" "}
+              I'm a <span className="gradient-text">Tech Enthusiast</span>{" "}
               with over 7 years of experience
             </h3>
             <p className="text-muted-foreground mb-6">
               Expertise in Python, JavaScript, Nodejs and TypeScript, specializing in the development and
               deployment of scalable web applications. Proficient in AWS cloud services,
+              including Lambda, S3, and Glue, with a strong track record of independent
+              project execution and successful team collaboration. Adept at integrating
+              front-end and back-end components to deliver high-performance solutions.
             </p>
             <p className="text-muted-foreground mb-6">
               My approach combines technical expertise with a deep understanding
