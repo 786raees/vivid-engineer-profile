@@ -37,7 +37,7 @@ const About: React.FC = () => {
           <div className="md:col-span-7">
             <h3 className="text-2xl font-bold mb-4">
               I'm a <span className="gradient-text">Full Stack Engineer</span>{" "}
-              with over 10 years of experience
+              with over 7 years of experience
             </h3>
             <p className="text-muted-foreground mb-6">
               I specialize in building modern web applications, robust backend
