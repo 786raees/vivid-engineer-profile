@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -57,15 +56,15 @@ const About: React.FC = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
               <div>
                 <h4 className="font-semibold mb-2">Name:</h4>
-                <p className="text-muted-foreground">John Doe</p>
+                <p className="text-muted-foreground">Waqar Khan</p>
               </div>
               <div>
                 <h4 className="font-semibold mb-2">Email:</h4>
-                <p className="text-muted-foreground">hello@example.com</p>
+                <p className="text-muted-foreground">waqar.lexumsoft@gmail.com</p>
               </div>
               <div>
                 <h4 className="font-semibold mb-2">Location:</h4>
-                <p className="text-muted-foreground">San Francisco, CA</p>
+                <p className="text-muted-foreground">Dubai</p>
               </div>
               <div>
                 <h4 className="font-semibold mb-2">Available:</h4>

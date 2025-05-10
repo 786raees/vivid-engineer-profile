@@ -1,60 +1,123 @@
-
 import React, { useState } from "react";
-import { Card, CardContent } from "@/components/ui/card";
+import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { useNavigate } from "react-router-dom";
 
 const Projects: React.FC = () => {
   const [activeTab, setActiveTab] = useState("all");
+  const navigate = useNavigate();
 
   const projects = [
     {
-      title: "3D Data Visualization",
-      category: "3d",
-      description: "Interactive 3D visualization tool for complex datasets.",
-      image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
-      tags: ["Three.js", "React", "D3.js"],
-      link: "#",
-    },
-    {
-      title: "Enterprise Dashboard",
+      title: "gio365: Real-Time Sports Betting Platform",
       category: "web",
-      description: "Responsive admin dashboard with real-time analytics.",
-      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7",
-      tags: ["React", "Redux", "Node.js"],
-      link: "#",
+      description:
+        "Full-stack Django app for real-time sports betting. Live football data, user management, betting logic, modern frontend, Dockerized, Sentry, and more.",
+      image: "/lovable-uploads/projects/gio365/unsplash-main.jpg",
+      tags: [
+        "Python",
+        "Django",
+        "HTMX",
+        "Tailwind",
+        "Docker",
+        "Sentry",
+        "API-Football",
+        "Django Q",
+        "Amazon SES",
+        "Amazon S3",
+        "Environs"
+      ],
+      link: "/projects/gio365",
     },
     {
-      title: "3D Product Configurator",
-      category: "3d",
-      description: "Customizable product viewer with 3D models and textures.",
-      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6",
-      tags: ["WebGL", "Three.js", "GLSL"],
-      link: "#",
-    },
-    {
-      title: "E-Commerce Platform",
+      title: "Gmail Contact Extractor & Dashboard",
       category: "web",
-      description: "Full-featured online store with payment processing.",
-      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
-      tags: ["Next.js", "MongoDB", "Stripe"],
-      link: "#",
+      description:
+        "Python app that extracts Gmail contacts using the Gmail API, with a secure Flask dashboard for visualization, management, and AES-256 encrypted exports.",
+      image: "/lovable-uploads/projects/google_profile/dashboard.png",
+      tags: [
+        "Python",
+        "Flask",
+        "Gmail API",
+        "OAuth 2.0",
+        "Pandas",
+        "Cryptography",
+        "Docker"
+      ],
+      link: "/projects/gmail-contact-extractor",
     },
     {
-      title: "3D Architectural Visualization",
-      category: "3d",
-      description: "Interactive architectural walkthroughs and renderings.",
-      image: "https://images.unsplash.com/photo-1531297484001-80022131f5a1",
-      tags: ["Blender", "Unity", "WebGL"],
-      link: "#",
+      title: "Automated Betting Management System (Stake.com Bot)",
+      category: "web",
+      description: "Automates and manages betting on Stake.com with multi-profile, advanced automation, and risk management.",
+      image: "/lovable-uploads/projects/stake/dashboard.png",
+      tags: ["Python", "Django", "Selenium", "SQLite", "CapMonster"],
+      link: "/projects/stake",
     },
     {
-      title: "Mobile Fitness App",
-      category: "mobile",
-      description: "Cross-platform app for workout tracking and nutrition.",
-      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
-      tags: ["React Native", "Firebase", "Redux"],
-      link: "#",
+      title: "Multilogin Automation Service (MLAS)",
+      category: "web",
+      description:
+        "Distributed microservices platform automating data erasure requests for GDPR/CCPA compliance. Kafka, AWS, browser automation, and more.",
+      image: "/lovable-uploads/projects/mlas/unsplash-main.jpg",
+      tags: [
+        "Python",
+        "FastAPI",
+        "Kafka",
+        "AWS",
+        "Lambda",
+        "SES",
+        "S3",
+        "EventBridge",
+        "DynamoDB",
+        "MongoDB",
+        "Playwright",
+        "Selenium",
+        "Docker"
+      ],
+      link: "/projects/mlas",
+    },
+    {
+      title: "Traffic Dashboard: Real-Time Analytics & Monitoring",
+      category: "web",
+      description:
+        "Sophisticated Django-based dashboard for real-time traffic analytics, campaign management, advanced reporting, and user management. Features live data, interactive visualizations, automated reports, and robust security.",
+      image: "/lovable-uploads/projects/traffic_dashboard/dashbaord.jpg",
+      tags: [
+        "Python",
+        "Django",
+        "Tailwind",
+        "Docker",
+        "SQLite",
+        "Hatch",
+        "Pre-commit",
+        "GitHub Actions",
+        "REST API"
+      ],
+      link: "/projects/traffic-dashboard",
+    },
+    {
+      title: "Server Automation Web: Infrastructure Management & Automation",
+      category: "web",
+      description:
+        "Django-based platform for automating server management: schedule, monitor, and control server tasks with a user-friendly web UI. Features real-time status, task scheduling, CI/CD integration, and robust security.",
+      image: "/lovable-uploads/projects/server_automation/server_list_2.jpg",
+      tags: [
+        "Python",
+        "Django",
+        "Django REST Framework",
+        "MySQL",
+        "SQLite",
+        "Docker",
+        "Docker Compose",
+        "Jenkins",
+        "Gunicorn",
+        "Whitenoise",
+        "Decouple",
+        "API"
+      ],
+      link: "/projects/server-automation-web",
     },
   ];
 
@@ -73,99 +136,97 @@ const Projects: React.FC = () => {
           onValueChange={setActiveTab}
           className="w-full"
         >
-          <div className="flex justify-center mb-12">
+          {/* <div className="flex justify-center mb-12">
             <TabsList className="bg-secondary">
               <TabsTrigger value="all">All</TabsTrigger>
               <TabsTrigger value="web">Web</TabsTrigger>
               <TabsTrigger value="mobile">Mobile</TabsTrigger>
               <TabsTrigger value="3d">3D</TabsTrigger>
             </TabsList>
-          </div>
+          </div> */}
 
           <TabsContent value={activeTab}>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="space-y-8">
+              {filteredProjects.length === 0 && (
+                <div className="text-center text-muted-foreground py-12">
+                  No projects found for this category.
+                </div>
+              )}
               {filteredProjects.map((project, index) => (
-                <Card
+                <div
                   key={index}
-                  className="overflow-hidden border-none shadow-lg bg-transparent"
+                  tabIndex={0}
+                  aria-label={`View details for ${project.title}`}
+                  className="group flex flex-col md:flex-row items-stretch bg-card rounded-lg shadow-lg border border-border overflow-hidden transition-all duration-300 cursor-pointer focus:ring-2 focus:ring-primary outline-none hover:shadow-2xl hover:border-primary"
+                  onClick={() => project.link !== "#" && navigate(project.link)}
+                  onKeyDown={e => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      if (project.link !== "#") navigate(project.link);
+                    }
+                  }}
                 >
-                  <div className="relative">
-                    <div className="overflow-hidden h-64">
+                  <div className="relative w-full md:w-64 h-56 md:h-auto flex-shrink-0 bg-secondary/40 flex items-center justify-center">
+                    {project.image ? (
                       <img
                         src={project.image}
                         alt={project.title}
-                        className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        onError={e => { e.currentTarget.style.display = 'none'; }}
                       />
-                    </div>
-                    <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-background/90"></div>
-                    <div className="absolute bottom-0 left-0 p-6">
-                      <h3 className="text-xl font-bold mb-2">{project.title}</h3>
-                      <p className="text-muted-foreground mb-4">
+                    ) : (
+                      <div className="w-full h-full flex items-center justify-center text-muted-foreground text-4xl font-bold bg-secondary/60">
+                        ?
+                      </div>
+                    )}
+                  </div>
+                  <div className="flex-1 flex flex-col justify-between p-6 bg-black/60 backdrop-blur-sm">
+                    <div>
+                      <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors text-white drop-shadow-md truncate" title={project.title}>
+                        {project.title}
+                      </h3>
+                      <p className="text-muted-foreground mb-4 text-white drop-shadow-sm line-clamp-3">
                         {project.description}
                       </p>
                       <div className="flex flex-wrap gap-2 mb-4">
                         {project.tags.map((tag, i) => (
                           <span
                             key={i}
-                            className="text-xs bg-secondary px-2 py-1 rounded-full text-muted-foreground"
+                            className="text-xs px-3 py-1 rounded-full font-semibold bg-primary/10 text-primary border border-primary/20 shadow-sm truncate max-w-[120px]"
+                            title={tag}
                           >
                             {tag}
                           </span>
                         ))}
                       </div>
-                      <a
-                        href={project.link}
-                        className="text-primary hover:underline text-sm font-medium"
+                    </div>
+                    <div>
+                      <Button
+                        size="sm"
+                        variant="secondary"
+                        className="rounded-full mt-2 group-hover:bg-primary group-hover:text-background transition-colors"
+                        tabIndex={-1}
+                        onClick={e => {
+                          e.stopPropagation();
+                          if (project.link !== "#") navigate(project.link);
+                        }}
+                        aria-label={`View details for ${project.title}`}
                       >
                         View Project →
-                      </a>
+                      </Button>
                     </div>
                   </div>
-                </Card>
+                </div>
               ))}
             </div>
           </TabsContent>
         </Tabs>
 
-        <div className="mt-12 text-center">
+        {/* <div className="mt-12 text-center">
           <Button variant="outline" className="rounded-full">
             View All Projects
           </Button>
-        </div>
-
-        {/* 3D Work Placeholder */}
-        <div className="mt-20">
-          <h3 className="text-2xl font-bold mb-8">3D Work Showcase</h3>
-          <div className="aspect-video bg-secondary/50 rounded-lg flex items-center justify-center">
-            <div className="text-center p-8">
-              <div className="w-20 h-20 bg-secondary/80 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-10 w-10 text-muted-foreground"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={1.5}
-                    d="M20 7l-8-4-8 4m16 0l-8 4m-8-4l8 4m8 0l-8 4-8-4"
-                  />
-                </svg>
-              </div>
-              <h4 className="text-xl font-medium mb-2">3D Model Showcase</h4>
-              <p className="text-muted-foreground mb-6">
-                This is where your 3D models and interactive experiences will be
-                displayed. You can embed WebGL content, Three.js scenes, or 3D
-                model viewers here.
-              </p>
-              <Button variant="outline" className="rounded-full">
-                Launch 3D Viewer
-              </Button>
-            </div>
-          </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

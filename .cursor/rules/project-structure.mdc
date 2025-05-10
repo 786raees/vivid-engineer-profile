@@ -1,0 +1,16 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# Project Structure Guide
+
+- The main entry point for routing is [src/App.tsx](mdc:src/App.tsx), which defines all routes using React Router.
+- Each main section of the site (Home, About, Experience, Projects, etc.) has its own page component in [src/pages/](mdc:src/pages).
+- Project detail pages are implemented as separate components in [src/pages/](mdc:src/pages), for example:
+  - [ProjectStakeDetail.tsx](mdc:src/pages/ProjectStakeDetail.tsx) for the Stake.com Bot project
+  - [ProjectGmailContactExtractorDetail.tsx](mdc:src/pages/ProjectGmailContactExtractorDetail.tsx) for the Gmail Contact Extractor project
+- The projects list is rendered by [src/components/Projects.tsx](mdc:src/components/Projects.tsx), which links to the appropriate detail page for each project.
+- Public assets and screenshots are stored in [public/lovable-uploads/projects/](mdc:public/lovable-uploads/projects).
+- 404s are handled by [src/pages/NotFound.tsx](mdc:src/pages/NotFound.tsx).
+

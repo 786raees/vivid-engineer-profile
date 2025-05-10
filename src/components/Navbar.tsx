@@ -1,6 +1,6 @@
-
 import React, { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
+import { Link } from "react-router-dom";
 
 const Navbar: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -34,21 +34,20 @@ const Navbar: React.FC = () => {
       )}
     >
       <div className="container mx-auto flex items-center justify-between px-4">
-        <a href="#home" className="text-2xl font-bold gradient-text">
+        <Link to="/" className="text-2xl font-bold gradient-text">
           DevPortfolio
-        </a>
+        </Link>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
-          {navLinks.map((link) => (
-            <a
-              key={link.name}
-              href={link.href}
-              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-primary after:left-0 after:-bottom-1 after:transition-all hover:after:w-full"
-            >
-              {link.name}
-            </a>
-          ))}
+          <ul className="flex items-center space-x-4">
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/about">About</Link></li>
+            <li><Link to="/experience">Experience</Link></li>
+            <li><Link to="/projects">Projects</Link></li>
+            <li><Link to="/testimonials">Testimonials</Link></li>
+            <li><Link to="/contact">Contact</Link></li>
+          </ul>
         </nav>
 
         {/* Mobile Menu Button */}
@@ -89,14 +88,14 @@ const Navbar: React.FC = () => {
           <div className="container mx-auto px-4 py-3">
             <nav className="flex flex-col space-y-4">
               {navLinks.map((link) => (
-                <a
+                <Link
                   key={link.name}
-                  href={link.href}
+                  to={link.href}
                   onClick={() => setMobileMenuOpen(false)}
                   className="text-base font-medium py-2 text-foreground hover:text-primary transition-colors"
                 >
                   {link.name}
-                </a>
+                </Link>
               ))}
             </nav>
           </div>

@@ -1,3 +1,4 @@
+// This file is now unused. The site is now multipage and each section has its own page.
 
 import React, { useEffect } from "react";
 import Navbar from "@/components/Navbar";

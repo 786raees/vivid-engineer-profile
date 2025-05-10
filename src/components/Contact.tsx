@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -48,7 +47,7 @@ const Contact: React.FC = () => {
                   </div>
                   <div>
                     <h4 className="font-medium mb-1">Email</h4>
-                    <p className="text-muted-foreground">hello@example.com</p>
+                    <p className="text-muted-foreground">waqar.lexumsoft@gmail.com</p>
                   </div>
                 </CardContent>
               </Card>
@@ -73,7 +72,7 @@ const Contact: React.FC = () => {
                   </div>
                   <div>
                     <h4 className="font-medium mb-1">Phone</h4>
-                    <p className="text-muted-foreground">+1 (555) 123-4567</p>
+                    <p className="text-muted-foreground">+923282828885</p>
                   </div>
                 </CardContent>
               </Card>
@@ -104,9 +103,7 @@ const Contact: React.FC = () => {
                   </div>
                   <div>
                     <h4 className="font-medium mb-1">Location</h4>
-                    <p className="text-muted-foreground">
-                      San Francisco, CA, USA
-                    </p>
+                    <p className="text-muted-foreground">Dubai</p>
                   </div>
                 </CardContent>
               </Card>
